@@ -3,28 +3,50 @@
  * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
  */
 
+import { DarkTheme, DefaultTheme } from '@react-navigation/native';
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
+
+const tintColorLight = '#1E3E62';
 const tintColorDark = '#fff';
 
-export const Colors = {
-  light: {
-    text: '#11181C',
+export const light: any = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    // custom/overrides
+    primary: "#1E3E62",
+    text: '#3C3D37',
     background: '#fff',
     tint: tintColorLight,
     icon: '#687076',
+    hamze: '#fff',
+    card: 'whitesmoke',
     tabIconDefault: '#687076',
     tabIconSelected: tintColorLight,
   },
-  dark: {
+};
+
+export const dark: any = {
+  ...DarkTheme,
+  colors: {
+    ...DarkTheme.colors,
+    // custom/overrides
+    primary: "#1E3E62",
     text: '#ECEDEE',
-    background: '#151718',
+    hamze: '#fff',
+    background: '#1E201E',
     tint: tintColorDark,
     icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
+    card: "#7198c5e0",
+    tabIconDefault: '#66a0cfff',
     tabIconSelected: tintColorDark,
   },
+};
+
+export const Colors: any = {
+  light: light.colors,
+  dark: dark.colors,
 };
 
 export const Fonts = Platform.select({
