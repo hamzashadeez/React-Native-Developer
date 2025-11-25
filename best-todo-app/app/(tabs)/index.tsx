@@ -21,6 +21,10 @@ const Home = () => {
             <View style={{ width: 220, backgroundColor: "whitesmoke", height: 145, marginRight: 20, borderRadius: 14 }} />
             <View style={{ width: 220, backgroundColor: "whitesmoke", height: 145, marginRight: 20, borderRadius: 14 }} />
             <View style={{ width: 220, backgroundColor: "whitesmoke", height: 145, marginRight: 20, borderRadius: 14 }} />
+
+            <View style={{ width: 220, backgroundColor: "whitesmoke", height: 145, marginRight: 20, borderRadius: 14 }} />
+            <View style={{ width: 220, backgroundColor: "whitesmoke", height: 145, marginRight: 20, borderRadius: 14 }} />
+            <View style={{ width: 220, backgroundColor: "whitesmoke", height: 145, marginRight: 20, borderRadius: 14 }} />
           </ScrollView>
         </View>
       </View>

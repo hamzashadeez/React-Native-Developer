@@ -46,12 +46,9 @@ import { dark, light } from "@/constants/theme";
 import { Platform, useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-// --- Authentication Setup ---
 
-// Define the key used to store the user's session data
 const AUTH_KEY = 'signedUser'; 
 
-// Define the type for the AuthContext value
 interface AuthContextType {
   user: string | null;
   signIn: (username: string) => Promise<void>;
@@ -75,7 +72,7 @@ function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // 1. Load initial session from SecureStore
+ 
   useEffect(() => {
     async function loadUser() {
       try {
@@ -99,7 +96,7 @@ function AuthProvider({ children }: { children: React.ReactNode }) {
     loadUser();
   }, []);
 
-  // 2. Sign In function
+
   const signIn = async (username: string) => {
     if(Platform.OS === "web") {
       try {
@@ -121,7 +118,7 @@ function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  // 3. Sign Out function
+
   const signOut = async () => {
     await SecureStore.deleteItemAsync(AUTH_KEY);
     setUser(null);
@@ -140,7 +137,7 @@ function AuthProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Auth Gate Component for Redirection Logic
+// Component to handle redirection based on auth state
 function AuthGate() {
   const { user } = useAuth();
   
