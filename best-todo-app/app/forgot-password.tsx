@@ -7,6 +7,8 @@ const ForgotPassword = () => {
         {/* this is where I will be adding the logics for retreiving passwords for users */}
       <Text>ForgotPassword</Text>
     </View>
+
+    // let's gooooooooo
   )
 }
 
