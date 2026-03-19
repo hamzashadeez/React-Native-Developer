@@ -152,6 +152,8 @@ Main Tabs (Authenticated)
     ├── Data Export
     └── About
 ```
+## Some Key Notes To Consider
+# This repo contains all the my react native projects and it's public
 
 ## Key Features
 
