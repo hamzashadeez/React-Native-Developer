@@ -13,7 +13,7 @@ export default function Page() {
               role="heading"
               className="text-3xl text-center native:text-5xl font-bold sm:text-4xl md:text-5xl lg:text-6xl font-rounded"
             >
-              Welcome to Project ACME
+              Welcome to Daily Habits
             </Text>
             <Text className="mx-auto max-w-[700px] text-lg text-center text-gray-500 md:text-xl dark:text-gray-400">
               Discover and collaborate on acme. Explore our services now.

@@ -26,7 +26,7 @@ function Header() {
           className="w-6 h-6 object-contain mr-2"
         />
         <Link className="font-bold flex-1 items-center justify-center" href="/">
-          ACME
+          Hamza Shadeez
         </Link>
         <View className="flex flex-row gap-4 sm:gap-6">
           <Link
