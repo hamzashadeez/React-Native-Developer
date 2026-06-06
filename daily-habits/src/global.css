@@ -2,30 +2,56 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css";
-@import "nativewind/theme";
 
 @layer theme {
   @theme {
-    /* Fonts */
-    --font-rounded: "SF Pro Rounded", "Hiragino Maru Gothic ProN", Meiryo,
-      "MS PGothic", sans-serif;
-  }
-}
-
-@media android {
-  :root {
-    --font-mono: monospace;
-    --font-rounded: normal;
-    --font-serif: serif;
-    --font-sans: normal;
-  }
-}
-
-@media ios {
-  :root {
-    --font-mono: ui-monospace;
-    --font-serif: ui-serif;
     --font-sans: system-ui;
-    --font-rounded: ui-rounded;
+    --font-serif: serif;
+    --font-mono: ui-monospace;
+    --font-rounded: "ui-rounded", "SF Pro Rounded", "Hiragino Maru Gothic ProN", Meiryo,
+      "MS PGothic", sans-serif;
+    --elevation-xs: 1;
+    --elevation-sm: 3;
+    --elevation-md: 6;
+    --elevation-lg: 8;
+    --elevation-xl: 13;
+    --elevation-2xl: 24;
+    --elevation-none: 0;
+  }
+}
+
+@layer utilities {
+  @utility leading-* {
+    line-height: calc(var(--spacing) / 1rem * --value(integer));
+  }
+
+  @utility color-* {
+    color: --value(--color-*);
+  }
+
+  @utility tint-* {
+    -rn-tint: --value(--color-*);
+    @prop -rn-tint tint;
+  }
+
+  @utility ripple-* {
+    -rn-ripple-style: --value("borderless");
+    -rn-ripple-color: --value(--color-*);
+  }
+
+  @utility ripple-radius-* {
+    -rn-ripple-radius: --value(integer);
+  }
+
+  @utility ripple-foreground {
+    -rn-ripple-foreground: "foreground";
+  }
+
+  @utility elevation-* {
+    -rn-elevation: --value(--elevation-*);
+  }
+
+  @utility corner-* {
+    corner-shape: --value("rounded", "squircle");
   }
 }
